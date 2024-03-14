@@ -283,3 +283,38 @@ body {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(0, 0%, 0%); }
+
+@media only screen and (max-width: 720px) {
+    .mainPart{
+        background-color: var(--color-White);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .mainImage {
+        background-size: contain;
+        width: 100%;
+        height: 300px; 
+    }
+    .cardFrontImg{
+        position: absolute; /* 或者是 relative, fixed, sticky 中的一个 */
+        transform: translate(5%, 60%);
+        z-index: 3;
+    }
+    .cardBackImg {
+        position: absolute; /* 或者是 relative, fixed, sticky 中的一个 */
+        transform: translate(20%, 5%);
+        z-index: 2;
+    }
+    .inputPart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+    .thirdLine{
+        width: 450px;
+    }
+}

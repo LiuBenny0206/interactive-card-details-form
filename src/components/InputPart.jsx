@@ -65,12 +65,12 @@ function InputPart ({setCardHolderName, setCNum, setCardEM, setCardEY, setCC, se
     };
 
     const handleNameChange = (e) => {
-        const newName = e.target.value;
+        const newName = e.target.value.toUpperCase(); 
         setCardName(newName);
         setCardHolderName(newName);
     };
     const handleCardNumberChange = (e) => {
-        const newNumber = e.target.value;
+        const newNumber = e.target.value.replace(/(\d{4})(?=\d)/g, '$1  '); // 每四个数字后添加空格
         setCardNumber(newNumber);
         setCNum(newNumber);
     };
@@ -111,6 +111,7 @@ function InputPart ({setCardHolderName, setCNum, setCardEM, setCardEY, setCC, se
                         type="text" 
                         name="cardNumber" 
                         placeholder="e.g. 1234 5678 9100 0000" 
+                        maxLength="22"
                         style={{borderColor: numberInputColor}}
                         value={cardNumber}
                         onChange= {handleCardNumberChange}
@@ -121,17 +122,19 @@ function InputPart ({setCardHolderName, setCNum, setCardEM, setCardEY, setCC, se
                     <div className="firstRow">
                         <p className="thirdTitle">EXP. DATE (MM/YY)</p>
                         <input 
-                            type="number" 
+                            type="text" 
                             name="mm" 
                             placeholder="MM" 
+                            maxLength="2"
                             style={{borderColor: expMonthInputColor}}
                             value={cardExpMonth}
                             onChange={handleCardExpMonthChange}    
                         />
                         <input 
-                            type="number" 
+                            type="text" 
                             name="yy" 
                             placeholder="YY"
+                            maxLength="2"
                             style={{borderColor: expYearInputColor}}
                             value={cardExpYear}
                             onChange={handleCardExpYearChange}    
@@ -140,9 +143,10 @@ function InputPart ({setCardHolderName, setCNum, setCardEM, setCardEY, setCC, se
                     <div className="secondRow">
                         <p className="thirdTitle">CVC</p>
                         <input 
-                            type="number" 
+                            type="text" 
                             name="cvc" 
                             placeholder="e.g 123"
+                            maxLength="3"
                             style={{borderColor: cvcInputColor}}
                             value={cardCvc}
                             onChange={handleCvcChange}
