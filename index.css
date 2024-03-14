@@ -1,0 +1,320 @@
+:root{
+    --color-White: hsl(0, 0%, 100%);
+    --color-LightGrayishViolet: hsl(270, 3%, 87%);
+    --color-DarkGrayishViolet: hsl(279, 6%, 55%);
+    --color-VeryDarkViolet: hsl(278, 68%, 11%);
+    --color-Red:hsl(0, 100%, 66%);
+    --color-LightPurple:hsl(249, 99%, 64%);
+    --color-DarkPurple:hsl(278, 94%, 30%);
+
+
+}
+
+* {
+    margin: 0;
+  }
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mainPart{
+    background-color: var(--color-White);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainImage {
+    background-size: contain;
+    width: 480px;
+    height: 900px; 
+    z-index: 1; 
+
+}
+
+/* FrontCardImgage Area */
+.cardFrontImg{
+    height: 245px;
+    width: 407px;
+    transform: translate(35%, 80%);
+    display: flex;
+    flex-direction: column;
+    padding:0px 20px;
+}
+
+.cardFrontImg svg{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.cardFrontImg #cardNum{
+    font-size: 30px;
+    font-weight: 100;
+    color: var(--color-White);
+    margin: 20px 0px;
+    letter-spacing: 3px;
+}
+
+.namePart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-White);
+    margin: 20px 0px;
+    font-weight: 500;
+}
+
+
+/* BackCardImgage Area */
+
+.cardBackImg {
+    height: 245px;
+    width: 447px;
+    transform: translate(55%, 95%);
+}
+
+.cardBackImg #cvcNum {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-White);
+    padding-top: 110px;
+    letter-spacing: 1px;
+    padding-left: 355px;
+}
+
+/* InputArea */
+
+.inputPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 300px;
+}
+/* InputArea FirstLine */
+
+.firstLine{
+    margin: 20px 0px;
+}
+.firstLine #firstTitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-VeryDarkViolet);
+    margin-bottom: 10px;
+}
+.firstLine input{
+    width: 350px;
+    height: 40px;
+    border: 2px solid var(--color-LightGrayishViolet);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+
+.firstLine input::placeholder{
+    font-size: 18px;
+}
+
+.firstLine input:focus{
+    border-image-source: linear-gradient(var(--color-LightPurple), var(--color-DarkPurple));
+    border-width: 2px;
+    border-image-slice: 1;
+    border-radius: 5%;
+}
+
+/* InputArea SecondLine */
+
+.secondLine{
+    margin: 20px 0px;
+}
+.secondLine #secondTitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-VeryDarkViolet);
+    margin-bottom: 10px;
+}
+.secondLine input{
+    width: 350px;
+    height: 40px;
+    border: 2px solid var(--color-LightGrayishViolet);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.secondLine input::placeholder{
+    font-size: 18px;
+}
+
+/* InputArea ThirdLine */
+
+.thirdLine{
+    display: flex;
+    flex-direction: row;
+}
+
+.thirdLine .thirdTitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-VeryDarkViolet);
+    margin-bottom: 10px;
+}
+
+.thirdLine input::placeholder{
+    font-size: 18px;
+}
+
+
+.firstRow input{
+    width: 70px;
+    height: 40px;
+    border: 2px solid var(--color-LightGrayishViolet);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+
+.secondRow input{
+    width: 168px;
+    height: 40px;
+    border: 2px solid var(--color-LightGrayishViolet);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+/* Form Button */
+
+#formButton {
+    width: 368px;
+    height: 50px;
+    background-color: var(--color-VeryDarkViolet);
+    text-align: center;
+    color: var(--color-White);
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#formButton:hover{
+    cursor: pointer;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-LightPurple),
+      var(--color-DarkPurple)
+    );
+  }
+
+/* Complete Area */
+.completeArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 300px;
+}
+.completeArea svg{
+    margin-bottom: 30px;
+}
+.completeArea h1{
+    margin-bottom: 20px;
+}
+.completeArea p{
+    color: var(--color-DarkGrayishViolet);
+    margin-bottom: 20px;
+
+}
+.completeArea button{
+    width: 368px;
+    height: 50px;
+    background-color: var(--color-VeryDarkViolet);
+    text-align: center;
+    color: var(--color-White);
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.completeArea button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-LightPurple),
+      var(--color-DarkPurple)
+    );
+  }
+
+/* Error Area */
+
+.numErrorText {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-Red);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.expMonthErrorText {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-Red);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(0, 0%, 0%); }
+
+@media only screen and (max-width: 720px) {
+    .mainPart{
+        background-color: var(--color-White);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .mainImage {
+        background-size: contain;
+        width: 100%;
+        height: 300px; 
+    }
+    .cardFrontImg{
+        position: absolute; /* 或者是 relative, fixed, sticky 中的一个 */
+        transform: translate(5%, 60%);
+        z-index: 3;
+    }
+    .cardBackImg {
+        position: absolute; /* 或者是 relative, fixed, sticky 中的一个 */
+        transform: translate(20%, 5%);
+        z-index: 2;
+    }
+    .inputPart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+    .thirdLine{
+        width: 450px;
+    }
+}
