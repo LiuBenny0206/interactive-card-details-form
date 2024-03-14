@@ -26,7 +26,7 @@ function InputPart ({setCardHolderName, setCNum, setCardEM, setCardEY, setCC, se
         // empty checks and worng types
         
         const wrongTypeError = {
-            number: !/^\d+$/.test(cardNumber) // 使用正则表达式检查cardNumber是否只包含数字
+            number: !/^[\d\s]+$/.test(cardNumber)
         };
 
         const emptyError = {
